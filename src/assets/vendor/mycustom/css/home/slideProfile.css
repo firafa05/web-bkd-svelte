@@ -1,0 +1,171 @@
+.hero-section {
+  background-image: url('../../assets/img/Blue\ Border.jpg'), linear-gradient(#348cd2, #ffffff);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: top;
+  /* padding-top: 200px; */
+}
+
+.home-profile {
+  height: 31rem;
+  padding: 2rem 0;
+  position: relative;
+}
+
+@media (max-width: 576px) {
+  .home-profile {
+    height: 28rem;
+  }
+}
+
+.home-profile .profile-slide {
+  background: rgba(37, 35, 92, 0.5);
+  width: 22rem;
+  height: 25rem;
+  box-shadow: 5px 5px 20px var(--bs-body-bg);
+  overflow: hidden;
+  border-radius: 2rem;
+}
+
+.home-profile .profile-slide img {
+  width: 22rem;
+  height: 25rem;
+  border-radius: 2rem;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+@media (max-width: 576px) {
+  .home-profile .profile-slide {
+    width: 18rem !important;
+    height: 23rem !important;
+  }
+
+  .home-profile .profile-slide img {
+    width: 18rem !important;
+    height: 23rem !important;
+  }
+}
+
+.home-profile .detail-profile {
+  width: 22rem;
+  height: 3rem;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: absolute;
+  background: rgb(27, 27, 27, 0.8);
+  bottom: 0rem;
+  border-radius: 0 0 2rem 2rem;
+  transition: 0.5s;
+}
+
+@media (max-width: 576px) {
+  .home-profile .detail-profile {
+    padding: 0;
+  }
+}
+
+.home-profile .detail-profile h3 {
+  margin: 0 10px -20px 10px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.home-profile .jabatan-profile {
+  opacity: 0;
+  color: #fff;
+  margin: 0 10px 0 10px;
+}
+
+@media (max-width: 576px) {
+  .home-profile .detail-profile h3 {
+    margin: 0 65px -20px 0;
+  }
+
+  .home-profile .jabatan-profile {
+    margin: 0 65px 0 10px;
+  }
+}
+
+.home-profile .jabatan-profile span {
+  font-size: 14px;
+}
+
+.home-profile .social-profile {
+  position: relative;
+  margin-top: -315px;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.home-profile .sosial_icon-profile {
+  width: 36px;
+  position: absolute;
+  background-color: var(--dark);
+  border-radius: 0 15px 15px 0;
+  transition: 0.5s;
+}
+
+.home-profile .sosial_icon-profile .bi-whatsapp {
+  color: #25d366;
+}
+
+.home-profile .sosial_icon-profile .bi-facebook {
+  color: #0e76a8;
+}
+
+.home-profile .sosial_icon-profile li {
+  list-style: none;
+  margin-left: -25px;
+}
+
+.home-profile .sosial_icon-profile li a {
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.home-profile .profile-slide:hover {
+  cursor: pointer;
+}
+
+.home-profile .profile-slide:hover .detail-profile {
+  height: 6rem;
+  background: rgba(37, 35, 92, 0.5);
+}
+
+.home-profile .profile-slide:hover .detail-profile h3 {
+  margin: 0 10px 0 10px;
+}
+
+@media (max-width: 576px) {
+  .home-profile .detail-profile h3 {
+    margin: 0 65px -20px 0;
+  }
+
+  .home-profile .jabatan-profile {
+    margin: 0 65px 0 10px;
+  }
+
+  .home-profile .profile-slide:hover .detail-profile h3 {
+    margin: 0 65px 0 10px;
+  }
+}
+
+.home-profile .profile-slide:hover img {
+  transform: scale(1.1) rotate(-3deg);
+  border-radius: 2rem;
+}
+
+.home-profile .profile-slide:hover .jabatan-profile {
+  opacity: 1;
+  visibility: visible;
+}
+
+.home-profile .profile-slide:hover .social-profile {
+  opacity: 1;
+  visibility: visible;
+}

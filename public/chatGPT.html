@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    mohon dikonversi ke ReactJS file html dan JavaScript dibawah ini:
+    <nav className="navbar">
+      <div class="container">
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav ms-auto py-0 me-2">
+            <div class="nav-item dropdown">
+              <a href="#" class="nav-link" data-bs-toggle="dropdown">Profil</a>
+              <div class="dropdown-menu">
+                <a href="/visimisi" class="dropdown-item">Visi dan Misi</a>
+                <a href="/tupoksi" class="dropdown-item">Tugas dan Fungsi</a>
+                <a href="/struktur" class="dropdown-item">Struktur Organisasi</a>
+                <a href="/profilpejabat" class="dropdown-item">Profil Pejabat</a>
+              </div>
+            </div>
+            <div class="nav-item dropdown">
+              <a href="#" class="nav-link" data-bs-toggle="dropdown">Informasi</a>
+              <div class="dropdown-menu">
+                <a href="#" class="dropdown-item">Perbup/Perkada</a>
+                <a href="#" class="dropdown-item">Pertanggungjawaban</a>
+                <a href="#" class="dropdown-item">Aplikasi</a>
+                <a href="#" class="dropdown-item">Kegiatan</a>
+              </div>
+            </div>
+            <a href="#" class="nav-item nav-link">Pelayanan</a>
+            <a href="#" class="nav-item nav-link">Transfomasi</a>
+            <a href="#" class="nav-item nav-link">Kontak</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    JavaScript:
+    <script>
+      const $dropdown = $('.dropdown');
+      const $dropdownToggle = $('.dropdown-toggle');
+      const $dropdownMenu = $('.dropdown-menu');
+      const showClass = 'show';
+
+      $(window).on('load resize', function () {
+        if (this.matchMedia('(min-width: 992px)').matches) {
+          $dropdown.hover(
+            function () {
+              const $this = $(this);
+              $this.addClass(showClass);
+              $this.find($dropdownToggle).attr('aria-expanded', 'true');
+              $this.find($dropdownMenu).addClass(showClass);
+            },
+            function () {
+              const $this = $(this);
+              $this.removeClass(showClass);
+              $this.find($dropdownToggle).attr('aria-expanded', 'false');
+              $this.find($dropdownMenu).removeClass(showClass);
+            }
+          );
+        } else {
+          $dropdown.off('mouseenter mouseleave');
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+/**/
+
+#tabchart-pc {
+  position: relative;
+}
+
+.nav-chart-pc {
+  position: absolute;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tab-chart-pc {
+  width: 75%;
+  height: 578px;
+  position: relative;
+  float: right;
+  top: 0;
+  left: 0;
+}
+
+.item-chart-pc {
+  outline: none;
+  border-radius: 0;
+}
+
+.card-chart-pc {
+  outline: none;
+}
+
+.button-chart-pc {
+  border-radius: 8px 8px 8px 8px !important;
+  border: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  outline: none !important;
+  outline-style: none !important;
+}
+
+.button-chart-pc.active,
+.button-chart-pc.active:hover {
+  background-color: var(--primary) !important;
+}
+
+.button-chart-pc:hover {
+  background-color: var(--secondary) !important;
+  color: var(--dark);
+}
+
+.button-chart-pc > img {
+  width: 100%;
+  height: 100px;
+  object-fit: 100% 75%;
+}
+
+.button-chart-pc .chart-pc-tex {
+  padding: 5px 12px;
+  user-select: none;
+  text-transform: uppercase;
+  border-radius: 0;
+  border: none;
+  outline: 0;
+}
+
+/**/
+
+.chart-container {
+  position: relative;
+  width: 100%;
+  height: 450px;
+}

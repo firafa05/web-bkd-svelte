@@ -1,0 +1,353 @@
+/********** My CSS **********/
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary: #06a3db;
+  --rgba-primary: rgba(6, 163, 219, 0.8);
+  --secondary: #f57e56;
+  --rgba-secondary: rgba(245, 126, 86, 0.8);
+  --light: #eef9ff;
+  --dark: #091e3e;
+  --fontFamily: 'Barlow', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--fontFamily);
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+.font-weight-bold {
+  font-weight: 700 !important;
+}
+
+h3,
+h4,
+.font-weight-semi-bold {
+  font-weight: 600 !important;
+}
+
+h5,
+h6,
+.font-weight-medium {
+  font-weight: 500 !important;
+}
+
+img {
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+  /* display: none; */
+  width: 0.8rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--bs-body-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 0.4rem;
+  border: 0.2rem solid transparent;
+  background-clip: content-box;
+  height: 1.2rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--secondary);
+}
+
+.bg-primary {
+  background: var(--primary) !important;
+}
+
+.text-primary {
+  color: var(--primary) !important;
+}
+
+.border-primary {
+  border-color: var(--primary) !important;
+}
+
+.bg-secondary {
+  background: var(--secondary) !important;
+}
+
+.text-secondary {
+  color: var(--secondary) !important;
+}
+
+.border-secondary {
+  border-color: var(--secondary) !important;
+}
+
+.bg-light {
+  background: var(--light) !important;
+}
+
+.text-light {
+  color: var(--light) !important;
+}
+
+.bg-dark {
+  background: var(--dark) !important;
+}
+
+.text-dark {
+  color: var(--dark) !important;
+}
+.btn {
+  font-family: var(--fontFamily);
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+.btn-primary,
+.btn-secondary {
+  color: #ffffff;
+}
+
+.btn-primary {
+  background: var(--primary) !important;
+  border-color: var(--primary) !important;
+}
+
+.btn-outline-primary {
+  color: var(--primary) !important;
+  border-color: var(--primary) !important;
+}
+
+.btn-outline-primary:hover {
+  background: var(--light) !important;
+  border-color: var(--primary) !important;
+}
+
+.btn-secondary {
+  background: var(--secondary) !important;
+  border-color: var(--secondary) !important;
+}
+
+.btn-primary:hover {
+  background: var(--secondary) !important;
+  border-color: var(--secondary) !important;
+}
+
+.btn-secondary:hover {
+  background: var(--primary) !important;
+  border-color: var(--primary) !important;
+}
+
+.btn-square {
+  width: 36px;
+  height: 36px;
+}
+
+.btn-sm-square {
+  width: 28px;
+  height: 28px;
+}
+
+.btn-lg-square {
+  width: 46px;
+  height: 46px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+}
+
+#spinner {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-out, visibility 0s linear 0.5s;
+  z-index: 99999;
+}
+
+#spinner.show {
+  transition: opacity 0.5s ease-out, visibility 0s linear 0s;
+  visibility: visible;
+  opacity: 1;
+}
+
+#spinner .spinner-border {
+  width: 6rem;
+  height: 6rem;
+}
+
+#back_to-top {
+  position: fixed;
+  display: none;
+  place-items: center;
+  right: 25px;
+  bottom: 25px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  z-index: 99;
+}
+
+#back_to-top #value_to-top {
+  display: block;
+  height: calc(100% - 10px);
+  width: calc(100% - 10px);
+  background-color: var(--bs-body-bg);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 30px;
+  color: var(--primary);
+}
+
+.top-bar {
+  width: 100%;
+}
+
+.top-shape::before {
+  position: absolute;
+  content: '';
+  width: 35px;
+  height: 100%;
+  top: 0;
+  left: -17px;
+  background: var(--primary);
+  border-color: var(--primary);
+  transform: skew(40deg);
+}
+
+.section-title h5::before {
+  position: absolute;
+  content: '';
+  width: 45px;
+  height: 3px;
+  right: -55px;
+  bottom: 11px;
+  background: var(--primary);
+}
+
+.section-title h5::after {
+  position: absolute;
+  content: '';
+  width: 15px;
+  height: 3px;
+  right: -75px;
+  bottom: 11px;
+  background: var(--secondary);
+}
+
+.twentytwenty-wrapper {
+  height: 100%;
+}
+
+.hero-header {
+  background: linear-gradient(rgba(9, 30, 62, 0.35), rgba(9, 30, 62, 0.35)), url(../assets/img/hero.jpg) center center no-repeat;
+  background-size: 100% 100%;
+}
+
+.home-button-carousel svg {
+  width: 28px;
+  height: 28px;
+  fill: var(--primary);
+  background-color: transparent;
+}
+
+/* DARK MODE */
+
+/* DARK PC & LAPTOP */
+
+input.input-darkmode {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+input.input-darkmode:checked + label {
+  background: var(--secondary);
+}
+
+input.input-darkmode:checked + label::after {
+  left: 54px;
+  transform: translateX(-100%);
+  background: linear-gradient(23deg, var(--primary), var(--primary));
+}
+
+label.label-darkmode {
+  width: 54px;
+  height: 23px;
+  position: relative;
+  display: block;
+  background: var(--secondary);
+  border-radius: 23px;
+  box-shadow: inset 0 5px 15px var(--rgba-secondary), inset 0 -5px 15px var(--rgba-secondary);
+  cursor: pointer;
+  transition: 0.3s;
+}
+label.label-darkmode::after {
+  content: '';
+  width: 23px;
+  height: 23px;
+  position: absolute;
+  top: 0px;
+  left: 1px;
+  background: linear-gradient(23deg, var(--primary), var(--primary));
+  border-radius: 50%;
+  box-shadow: 0 5px 15px var(--bs-body-bg);
+  transition: 0.3s;
+}
+
+label.label-darkmode:active::after {
+  width: 40px;
+}
+
+label.label-darkmode i.icon-darkmode {
+  position: absolute;
+  width: 12px;
+  z-index: 100;
+  font-size: 16px;
+  color: var(--bs-body-bg);
+}
+
+label.label-darkmode i.icon-darkmode.sun {
+  left: 3px;
+  top: -2px;
+  transition: 0.3s;
+}
+
+label.label-darkmode i.icon-darkmode.moon {
+  left: 34px;
+  top: -2px;
+  transition: 0.3s;
+}
+
+/* DARK HP & TABLET */
+
+.toggle_darkmode-hp {
+  padding-left: 7px;
+  padding-right: 18px;
+  cursor: pointer;
+}
+
+label.switch-darkmode {
+  color: var(--primary);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+label.switch-darkmode input {
+  display: none;
+}

@@ -1,0 +1,52 @@
+/*--Slide - Hero--*/
+
+.slidehero .swiper-button-prev,
+.slidehero .swiper-button-next {
+  top: 50%;
+  color: var(--bs-body-bg);
+}
+
+.slidehero-slide {
+  position: relative;
+}
+
+.slidehero-slide img {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+.slidehero-caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(9, 32, 50, 0.45), rgba(9, 32, 50, 0.85)) center center no-repeat;
+  z-index: 1;
+}
+
+.slidehero-caption .slidehero-title {
+  max-width: 900px;
+}
+
+.slidehero-caption .slidehero-title h5 {
+  font-size: 18px;
+  font-weight: 500 !important;
+}
+
+.slidehero-caption .slidehero-title h1 {
+  font-size: 60px;
+  font-weight: 600 !important;
+}
+
+@media (max-width: 576px) {
+  .slidehero-caption .slidehero-title h5 {
+    font-size: 12px;
+  }
+
+  .slidehero-caption .slidehero-title h1 {
+    font-size: 20px;
+  }
+}
